@@ -46,6 +46,15 @@ log.forEach((item) => item.addEventListener('copy', function () {
     item.style.color = 'red';
 }));
 
+window.document.addEventListener('wheel', () => {console.log('user is scrolling');});
+
+const textP = document.querySelectorAll('p');
+textP[0].addEventListener('wheel', function(event) {
+    event.target.style.backgroundColor = 'blue';
+});
+// textContentP.addEventListener('wheel', (event) => {
+//     event.target.style.backgroundColor = 'paleturquoise';
+// });
 //  navItem.forEach(
 //    (item, i) =>
 //     (item.textContent = siteContent.nav['nav-item-' + (i + 1)]) &&
